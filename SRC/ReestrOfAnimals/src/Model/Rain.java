@@ -1,6 +1,6 @@
 package Model;
 
-public class Main {
+public class Rain {
     public static void main(String[] args) {
         ReestrOf <Animals> ra=new ReestrOf<>();
         ra.add(new Donkey("Asia", "2020.11.11"));

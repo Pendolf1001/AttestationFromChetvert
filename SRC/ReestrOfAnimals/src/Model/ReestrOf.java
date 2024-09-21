@@ -80,5 +80,9 @@ class ReestrOf <T extends Animals>{
         }
         return sb.toString();
     }
+
+    int getSize(){
+        return reestrOfAnimals.size();
+    }
 }
 

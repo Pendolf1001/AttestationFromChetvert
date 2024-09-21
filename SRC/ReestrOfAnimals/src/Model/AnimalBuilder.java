@@ -4,7 +4,7 @@ class AnimalBuilder < T extends Animals>  {
     private T t;
 
 
-    public T animalBuild (String type, String name, String birthDate ){
+     T animalBuild (String type, String name, String birthDate ){
         if (type.equals("Dog")){
             Dog s=new Dog(name,birthDate );
             t=(T)s;
