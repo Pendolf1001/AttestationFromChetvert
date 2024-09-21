@@ -3,7 +3,7 @@ package Model;
 public class Main {
     public static void main(String[] args) {
 
-        Animals a= new Horse("Asia", "2020.11.11");
+        Animals a= new Camal("Asia", "2020.11.11");
         a.addCommand("Ko mne", "Bezhit ko mne");
         System.out.println(a);
         System.out.println(a.getCommand());
