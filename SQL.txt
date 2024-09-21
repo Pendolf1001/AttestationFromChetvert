@@ -1,0 +1,219 @@
+Задание 7.2
+
+Создать базу данных Human_friends
+
+mysql> SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
+| test               |
++--------------------+
+5 rows in set (0.01 sec)
+
+mysql> CREATE DATABASE  Human_friends;
+Query OK, 1 row affected (0.00 sec)
+mysql> SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+| Human_friends      |
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
+| test               |
++--------------------+
+6 rows in set (0.01 sec)
+
+***********************************************************************************
+Создать таблицы pets и pack_animals:
+
+
+mysql> use Human_friends;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+
+mysql> CREATE TABLE pets(
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  `name` VARCHAR(60) NOT NULL,
+  `type` VARCHAR(60) NOT NULL,
+  `birthDate` DATE NOT NULL,
+  `commands` VARCHAR(60) NOT NULL
+  );
+
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> CREATE TABLE pack_animals(
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  `name` VARCHAR(60) NOT NULL,
+  `type` VARCHAR(60) NOT NULL,
+  `birthDate` DATE NOT NULL,
+  `commands` VARCHAR(60) NOT NULL
+  );
+Query OK, 1 row affected, 1 warning (0.00 sec)
+mysql> show tables;
++-------------------------+
+| Tables_in_Human_friends |
++-------------------------+
+| pack_animals            |
+| pets                    |
++-------------------------+
+2 rows in set (0.00 sec)
+
+******************************************************************************
+
+Заполнить таблицы pets и pack_animals:
+
+mysql> INSERT INTO pets (`name`, `type`, `birthDate`, `commands`) VALUES                                           
+->  ('Snezhok', 'cat', '2020-02-24', 'Sit, Golos'),                                                            
+->  ('Druzhok', 'dog', '2021-03-15', 'Sit, Golos, Lapu, Lezhat'),                                              
+->  ('Homa', 'hamster', '2023-07-11', 'Sit'),                                                                  
+->  ('Barsik', 'cat', '2019-08-14', 'Sit, Carapat'),                                                           
+->  ('Senya', 'hamster', '2024-01-09', 'Sit'),                                                                 
+->  ('Rex', 'dog', '2022-03-11','Sit, Golos, Lapu, Lezhat, Sluzhit');   
+                                   
+Query OK, 6 rows affected (0.01 sec)                                                                          
+ Records: 6  Duplicates: 0  Warnings: 0                                                                                                                                                                                        
+mysql> select * FROM pets                                                                                          
+-> ;                                                                                                       
++----+---------+---------+------------+-----------------------------------+                                    
+| id | name    | type    | birthdate  | commands                          |                                    
++----+---------+---------+------------+-----------------------------------+                                    
+|  1 | Snezhok | cat     | 2020-02-24 | Sit, Golos                        |                                    
+|  2 | Druzhok | dog     | 2021-03-15 | Sit, Golos, Lapu, Lezhat          |                                    
+|  3 | Homa    | hamster | 2023-07-11 | Sit                               |                                    
+|  4 | Barsik  | cat     | 2019-08-14 | Sit, Carapat                      |                                    
+|  5 | Senya   | hamster | 2024-01-09 | Sit                               |                                    
+|  6 | Rex     | dog     | 2022-03-11 | Sit, Golos, Lapu, Lezhat, Sluzhit |                                    
++----+---------+---------+------------+-----------------------------------+                                    
+6 rows in set (0.00 sec)                                                                                                                                                                                                      
+
+mysql>  mysql> INSERT INTO pack_animals (`name`, `type`, `birthDate`, `commands`) VALUES                                   
+->  ('Burya', 'horse', '2022-08-15', 'Galop, Rys, Stay'),                                                      
+->  ('Zheltoc', 'camal', '2018-03-27', 'Lech, Vstat'),                                                         
+->  ('Pyatnash', 'donkey', '2019-02-21', 'Sit, Golos'),                                                        
+->  ('Veter', 'horse', '2020-08-15', 'Galop, Rys, Stay'),                                                      
+->  ('Belock', 'camal', '2020-04-01', 'Lech, Vstat'),                                                          
+->  ('Pugovka', 'donkey', '2023-03-11', 'Sit, Golos');                                                     
+Query OK, 6 rows affected (0.00 sec)                                                                           
+Records: 6  Duplicates: 0  Warnings: 0  
+
+
+mysql> SELECT * FROM pack_animals;                                                                             
++----+----------+--------+------------+------------------+'),                                                  
+| id | name     | type   | birthdate  | commands         |                                                     
++----+----------+--------+------------+------------------+,                                                    
+|  1 | Burya    | horse  | 2022-08-15 | Galop, Rys, Stay |'),                                                  
+|  2 | Zheltoc  | camal  | 2018-03-27 | Lech, Vstat      |                                                     
+|  3 | Pyatnash | donkey | 2019-02-21 | Sit, Golos       |                                                     
+|  4 | Veter    | horse  | 2020-08-15 | Galop, Rys, Stay |                                                     
+|  5 | Belock   | camal  | 2020-04-01 | Lech, Vstat      |                                                     
+|  6 | Pugovka  | donkey | 2023-03-11 | Sit, Golos       |                                                     
++----+----------+--------+------------+------------------+                                                     
+6 rows in set (0.00 sec)    
+
+*********************************************************************************************
+
+Удалить записи о верблюдах
+
+
+mysql> DELETE FROM pack_animals WHERE type='camal';                                                            
+Query OK, 2 rows affected (0.00 sec)                                                                                                                                                                                          
+mysql> SELECT * FROM pack_animals;                                                                             
++----+----------+--------+------------+------------------+                                                     
+| id | name     | type   | birthdate  | commands         |                                                     
++----+----------+--------+------------+------------------+                                                     
+|  1 | Burya    | horse  | 2022-08-15 | Galop, Rys, Stay |                                                     
+|  3 | Pyatnash | donkey | 2019-02-21 | Sit, Golos       |                                                     
+|  4 | Veter    | horse  | 2020-08-15 | Galop, Rys, Stay |                                                     
+|  6 | Pugovka  | donkey | 2023-03-11 | Sit, Golos       |                                                     
++----+----------+--------+------------+------------------+                                                     
+4 rows in set (0.00 sec)  
+
+***************************************************************************************************
+
+Создать новую таблицу для животных  в возрасте от 1 до 3 лет 
+и вычислить их возраст с точностью до месяца
+
+mysql> CREATE TABLE animals(                                                                                       
+->   `name` VARCHAR(60) NOT NULL,                                                                              
+->   `type` VARCHAR(60) NOT NULL,                                                                              
+->   `birthDate` DATE NOT NULL,                                                                                
+->   `commands` VARCHAR(60) NOT NULL                                                                           
+->   );                                                                                                    
+Query OK, 0 rows affected (0.02 sec)  
+
+
+mysql> INSERT INTO animals                                                                                         
+->   SELECT `name`, `type`, `birthDate`, `commands`                                                            
+->   FROM pets                                                                                                 
+->  WHER  WHERE TRUNCATE( ((FLOOR(TIMESTAMPDIFF(MONTH, `birthDate`, CURDATE())))/12),2)>1 AND TRUNCATE( ((FLOOR(TIMESTAMPDIFF(MONTH, `birthDate`, CURDATE())))/12),2)<3                                                       
+->   UNION                                                                                                     
+->   SELECT `name`, `type`, `birthDate`, `commands`                                                            
+->   FROM  pack_animals                                                                                        
+->   WHERE TRUNCATE( ((FLOOR(TIMESTAMPDIFF(MONTH, `birthDate`, CURDATE())))/12),2)>1 AND TRUNCATE( ((FLOOR(TIMESTAMPDIFF(MONTH, `birthDate`, CURDATE())))/12),2)<3;                                                       
+Query OK, 4 rows affected (0.01 sec)                                                                           
+Records: 4  Duplicates: 0  Warnings: 0   
+
+
+mysql> SELECT * FROM animals;                                                                                  
++---------+---------+------------+-----------------------------------+                                         
+| name    | type    | birthDate  | commands                          |                                         
++---------+---------+------------+-----------------------------------+                                         
+| Homa    | hamster | 2023-07-11 | Sit                               |                                         
+| Rex     | dog     | 2022-03-11 | Sit, Golos, Lapu, Lezhat, Sluzhit |                                         
+| Burya   | horse   | 2022-08-15 | Galop, Rys, Stay                  |                                         
+| Pugovka | donkey  | 2023-03-11 | Sit, Golos                        |                                         
++---------+---------+------------+-----------------------------------+                                         
+4 rows in set (0.00 sec)
+
+mysql> SELECT * , TRUNCATE( ((FLOOR(TIMESTAMPDIFF(MONTH, `birthDate`, CURDATE())))/12),2) AS Vozrast from animals;                                                                                                            
++---------+---------+------------+-----------------------------------+---------+                               
+| name    | type    | birthDate  | commands                          | Vozrast |                               
++---------+---------+------------+-----------------------------------+---------+                               
+| Homa    | hamster | 2023-07-11 | Sit                               |    1.16 |                               
+| Rex     | dog     | 2022-03-11 | Sit, Golos, Lapu, Lezhat, Sluzhit |    2.50 |                               
+| Burya   | horse   | 2022-08-15 | Galop, Rys, Stay                  |    2.08 |                               
+| Pugovka | donkey  | 2023-03-11 | Sit, Golos                        |    1.50 |                               
+---------+---------+------------+-----------------------------------+---------+                               
+4 rows in set (0.00 sec)   
+
+******************************************************************************************************
+
+Объединить все созданные таблицы в одну, сохраняя информацию о принадлежности 
+к исходным таблицам:
+
+mysql> SELECT * , ('animals') AS FromTab                                                                           
+->   FROM animals                                                                                              
+-> UNION ALL SELECT `name`, `type`, `birthDate`, `commands`, ('pets') AS FromTab                               
+->   FROM pets                                                                                                 
+-> UNION ALL SELECT `name`, `type`, `birthDate`, `commands`, ('packAnimals') AS FromTab                        
+->   FROM pack_animals;                                                                                    
++----------+---------+------------+-----------------------------------+-------------+                          
+| name     | type    | birthDate  | commands                          | FromTab     |                          
++----------+---------+------------+-----------------------------------+-------------+                          
+| Homa     | hamster | 2023-07-11 | Sit                               | animals     |                          
+| Rex      | dog     | 2022-03-11 | Sit, Golos, Lapu, Lezhat, Sluzhit | animals     |                          
+| Burya    | horse   | 2022-08-15 | Galop, Rys, Stay                  | animals     |                          
+| Pugovka  | donkey  | 2023-03-11 | Sit, Golos                        | animals     |                          
+| Snezhok  | cat     | 2020-02-24 | Sit, Golos                        | pets        |                          
+| Druzhok  | dog     | 2021-03-15 | Sit, Golos, Lapu, Lezhat          | pets        |                          
+| Homa     | hamster | 2023-07-11 | Sit                               | pets        |                          
+| Barsik   | cat     | 2019-08-14 | Sit, Carapat                      | pets        |                          
+| Senya    | hamster | 2024-01-09 | Sit                               | pets        |                         
+| Rex      | dog     | 2022-03-11 | Sit, Golos, Lapu, Lezhat, Sluzhit | pets        |                          
+| Burya    | horse   | 2022-08-15 | Galop, Rys, Stay                  | packAnimals |                          
+| Pyatnash | donkey  | 2019-02-21 | Sit, Golos                        | packAnimals |                          
+| Veter    | horse   | 2020-08-15 | Galop, Rys, Stay                  | packAnimals |                          
+| Pugovka  | donkey  | 2023-03-11 | Sit, Golos                        | packAnimals |                          
++----------+---------+------------+-----------------------------------+-------------+                          
+14 rows in set (0.00 sec)                                                                                                                    
+
+
+
