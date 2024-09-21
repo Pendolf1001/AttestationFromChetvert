@@ -1,0 +1,399 @@
+Задание 1
+
+db@db-ubuntu22:~/compose$ ll
+total 12
+drwxrwxr-x  2 db db 4096 Sep 14 14:51 ./
+drwxr-x--- 22 db db 4096 Sep 14 13:16 ../
+-rw-rw-r--  1 db db 1169 Sep 14 13:06 compose.yml
+db@db-ubuntu22:~/compose$ cd ..
+db@db-ubuntu22:~$ ll
+total 168
+drwxr-x--- 22 db   db       4096 Sep 14 13:16 ./
+drwxr-xr-x  7 root root     4096 Aug 18 12:27 ../
+-rw-------  1 db   db       6133 Sep  7 15:47 .bash_history
+-rw-r--r--  1 db   db        220 Mar 31 11:41 .bash_logout
+-rw-r--r--  1 db   db       3771 Mar 31 11:41 .bashrc
+drwx------ 12 db   db       4096 Aug 17 19:23 .cache/
+drwxrwxr-x  2 db   db       4096 Sep 14 14:51 compose/
+drwx------ 15 db   db       4096 Aug 17 19:23 .config/
+drwxr-xr-x  2 db   db       4096 Aug 17 17:37 Desktop/
+-rw-r--r--  1 db   db        408 Aug 17 17:45 dfjksg
+drwx------  3 db   db       4096 Sep  7 14:37 .docker/
+drwxr-xr-x  2 db   db       4096 Aug 17 17:37 Documents/
+drwxr-xr-x  2 db   db       4096 Aug 17 17:37 Downloads/
+drwxrwxr-x  2 test www-data 4096 Aug 18 11:41 dz3/
+d-wx-ws--x  3 db   www-data 4096 Aug 18 12:42 dz321/
+lrwxrwxrwx  1 db   db          7 Aug 17 20:17 fileLns -> fileNew
+-rw-------  1 db   db         35 Aug 17 19:35 .lesshst
+lrwxrwxrwx  1 db   db         19 Aug 17 19:12 lns -> /home/db/test/test2*
+drwx------  4 db   db       4096 Aug 17 17:37 .local/
+drwxr-xr-x  2 db   db       4096 Aug 17 17:37 Music/
+drwxr-xr-x  2 db   db       4096 Aug 17 17:37 Pictures/
+-rw-r--r--  1 db   db        807 Mar 31 11:41 .profile
+drwxr-xr-x  2 db   db       4096 Aug 17 17:37 Public/
+-rw-rw-r--  1 db   db         66 Aug 18 14:38 .selected_editor
+drwxrwxr-x  2 db   db       4096 Sep  7 14:35 sem4/
+drwx------  5 db   db       4096 Aug 17 18:01 snap/
+drwx------  2 db   db       4096 Aug 17 17:38 .ssh/
+-rw-r--r--  1 db   db          0 Aug 17 17:42 .sudo_as_admin_successful
+drwxr-xr-x  2 db   db       4096 Aug 17 17:37 Templates/
+drwxrwsrwt  4 db   www-data 4096 Sep  6 20:44 test/
+-rw-rw-r--  1 db   db         55 Sep 14 15:00 testcron
+-rw-rw-r--  1 db   db        130 Aug 17 19:22 testLn
+lrwxrwxrwx  1 db   db          5 Aug 17 19:02 testlns -> test2
+drwxrwxr-x  2 db   db       4096 Aug 17 18:48 testnew/
+-rw-r-----  1 db   db          5 Sep 14 13:16 .vboxclient-clipboard-tty2-control.pid
+-rw-r-----  1 db   db          5 Sep 14 13:16 .vboxclient-clipboard-tty2-service.pid
+-rw-r-----  1 db   db          5 Sep 14 13:16 .vboxclient-draganddrop-tty2-control.pid
+-rw-r-----  1 db   db          5 Sep 14 13:16 .vboxclient-draganddrop-tty2-service.pid
+-rw-r-----  1 db   db          5 Sep 14 13:16 .vboxclient-hostversion-tty2-control.pid
+-rw-r-----  1 db   db          5 Sep 14 13:16 .vboxclient-seamless-tty2-control.pid
+-rw-r-----  1 db   db          5 Sep 14 13:16 .vboxclient-seamless-tty2-service.pid
+-rw-r-----  1 db   db          5 Sep 14 13:16 .vboxclient-vmsvga-session-tty2-control.pid
+-rw-r-----  1 db   db          5 Sep 14 13:16 .vboxclient-vmsvga-session-tty2-service.pid
+drwxr-xr-x  2 db   db       4096 Aug 17 17:37 Videos/
+-rw-------  1 db   db       1338 Aug 17 19:21 .viminfo
+db@db-ubuntu22:~$ mkdir attestacia
+db@db-ubuntu22:~$ cd attestacia/
+db@db-ubuntu22:~/attestacia$ cat > Pets.txt
+dog : Volchok, Rex
+cat: Snezhok, Barsik
+hamster: homa
+db@db-ubuntu22:~/attestacia$ cat Pets.txt
+dog : Volchok, Rex
+cat: Snezhok, Barsik
+hamster: homa
+db@db-ubuntu22:~/attestacia$  cat > Pack_animals.txt
+horse: Horsee
+camal: Said
+donkey: Osya
+db@db-ubuntu22:~/attestacia$
+db@db-ubuntu22:~/attestacia$ cat Pets.txt Pack_animals.txt > Human_Friends.txt
+db@db-ubuntu22:~/attestacia$ ll
+total 20
+drwxrwxr-x  2 db db 4096 Sep 14 15:13 ./
+drwxr-x--- 23 db db 4096 Sep 14 15:04 ../
+-rw-rw-r--  1 db db   93 Sep 14 15:13 Human_Friends.txt
+-rw-rw-r--  1 db db   39 Sep 14 15:11 Pack_animals.txt
+-rw-rw-r--  1 db db   54 Sep 14 15:08 Pets.txt
+db@db-ubuntu22:~/attestacia$ cat Human_Friends.txt
+dog : Volchok, Rex
+cat: Snezhok, Barsik
+hamster: homa
+horse: Horsee
+camal: Said
+donkey: Osya
+db@db-ubuntu22:~/attestacia$ ls
+Human_Friends.txt  Pack_animals.txt  Pets.txt
+
+**************************************************************************************************************
+Задание 2
+
+db@db-ubuntu22:~/attestacia$ mkdir newdir
+db@db-ubuntu22:~/attestacia$ mv Human_Friends.txt newdir
+db@db-ubuntu22:~/attestacia$ ll
+total 20
+drwxrwxr-x  3 db db 4096 Sep 14 15:18 ./
+drwxr-x--- 23 db db 4096 Sep 14 15:04 ../
+drwxrwxr-x  2 db db 4096 Sep 14 15:18 newdir/
+-rw-rw-r--  1 db db   39 Sep 14 15:11 Pack_animals.txt
+-rw-rw-r--  1 db db   54 Sep 14 15:08 Pets.txt
+db@db-ubuntu22:~/attestacia$ cd newdir/
+db@db-ubuntu22:~/attestacia/newdir$ ll
+total 12
+drwxrwxr-x 2 db db 4096 Sep 14 15:18 ./
+drwxrwxr-x 3 db db 4096 Sep 14 15:18 ../
+-rw-rw-r-- 1 db db   93 Sep 14 15:13 Human_Friends.txt
+db@db-ubuntu22:~/attestacia/newdir$ cat Human_Friends.txt
+dog : Volchok, Rex
+cat: Snezhok, Barsik
+hamster: homa
+horse: Horsee
+camal: Said
+donkey: Osya
+db@db-ubuntu22:~/attestacia/newdir$
+
+************************************************************************************************************
+
+Задание 3
+
+db@db-ubuntu22:/$ sudo wget https://dev.mysql.com/get/mysql-apt-config_0.8.32-1_all.deb
+--2024-09-14 16:04:53--  https://dev.mysql.com/get/mysql-apt-config_0.8.32-1_all.deb
+Resolving dev.mysql.com (dev.mysql.com)... 88.221.98.102, 2a02:26f0:e2:1b7::2e31, 2a02:26f0:e2:195::2e31
+Connecting to dev.mysql.com (dev.mysql.com)|88.221.98.102|:443... connected.
+HTTP request sent, awaiting response... 302 Moved Temporarily
+Location: https://repo.mysql.com//mysql-apt-config_0.8.32-1_all.deb [following]
+--2024-09-14 16:04:54--  https://repo.mysql.com//mysql-apt-config_0.8.32-1_all.deb
+Resolving repo.mysql.com (repo.mysql.com)... 23.46.121.197, 2a02:26f0:9500:10b6::1d68, 2a02:26f0:9500:10a6::1d68
+Connecting to repo.mysql.com (repo.mysql.com)|23.46.121.197|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 18068 (18K) [application/x-debian-package]
+Saving to: ‘mysql-apt-config_0.8.32-1_all.deb’
+
+mysql-apt-config_0.8.32-1_all.deb            100%[==============================================================================================>]  17.64K  --.-KB/s    in 0s
+
+2024-09-14 16:04:54 (310 MB/s) - ‘mysql-apt-config_0.8.32-1_all.deb’ saved [18068/18068]
+
+db@db-ubuntu22:/$ sudo dpkg -i mysql-apt-config_0.8.32-1_all.deb
+Selecting previously unselected package mysql-apt-config.
+(Reading database ... 193863 files and directories currently installed.)
+Preparing to unpack mysql-apt-config_0.8.32-1_all.deb ...
+Unpacking mysql-apt-config (0.8.32-1) ...
+Setting up mysql-apt-config (0.8.32-1) ...
+db@db-ubuntu22:/$ sudo apt-get update
+Hit:1 http://ru.archive.ubuntu.com/ubuntu noble InRelease
+Hit:2 http://ru.archive.ubuntu.com/ubuntu noble-updates InRelease
+Hit:3 http://ru.archive.ubuntu.com/ubuntu noble-backports InRelease
+Hit:4 http://security.ubuntu.com/ubuntu noble-security InRelease
+Get:5 http://repo.mysql.com/apt/ubuntu noble InRelease [22.7 kB]
+Hit:6 http://nginx.org/packages/ubuntu noble InRelease
+Hit:7 https://download.docker.com/linux/ubuntu noble InRelease
+Hit:8 https://download.virtualbox.org/virtualbox/debian jammy InRelease
+Get:9 http://repo.mysql.com/apt/ubuntu noble/mysql-8.4-lts Sources [966 B]
+Hit:10 https://ppa.launchpadcontent.net/ondrej/php/ubuntu noble InRelease
+Get:11 http://repo.mysql.com/apt/ubuntu noble/mysql-8.4-lts amd64 Packages [17.0 kB]
+Get:12 http://repo.mysql.com/apt/ubuntu noble/mysql-tools amd64 Packages [4,161 B]
+Fetched 44.8 kB in 1s (32.3 kB/s)
+Reading package lists... Done
+N: Ignoring file 'virtualbox-7.0_7.0.20-163906-Ubuntu-jammy_amd64.deb' in directory '/etc/apt/sources.list.d/' as it has an invalid filename extension
+db@db-ubuntu22:/$ sudo apt-get install mysql-server
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  libaio1t64 libmecab2 mecab-ipadic mecab-ipadic-utf8 mecab-utils mysql-client mysql-common mysql-community-client mysql-community-client-core mysql-community-client-plugins
+  mysql-community-server mysql-community-server-core
+The following NEW packages will be installed:
+  libaio1t64 libmecab2 mecab-ipadic mecab-ipadic-utf8 mecab-utils mysql-client mysql-common mysql-community-client mysql-community-client-core mysql-community-client-plugins
+  mysql-community-server mysql-community-server-core mysql-server
+0 upgraded, 13 newly installed, 0 to remove and 183 not upgraded.
+Need to get 36.6 MB of archives.
+After this operation, 262 MB of additional disk space will be used.
+N: Ignoring file 'virtualbox-7.0_7.0.20-163906-Ubuntu-jammy_amd64.deb' in directory '/etc/apt/sources.list.d/' as it has an invalid filename extension
+Do you want to continue? [Y/n] y
+Get:1 http://ru.archive.ubuntu.com/ubuntu noble/main amd64 libaio1t64 amd64 0.3.113-6build1 [7,180 B]
+Get:2 http://ru.archive.ubuntu.com/ubuntu noble/main amd64 libmecab2 amd64 0.996-14ubuntu4 [201 kB]
+Get:3 http://ru.archive.ubuntu.com/ubuntu noble/main amd64 mecab-utils amd64 0.996-14ubuntu4 [4,804 B]
+Get:4 http://ru.archive.ubuntu.com/ubuntu noble/main amd64 mecab-ipadic all 2.7.0-20070801+main-3 [6,718 kB]
+Get:5 http://repo.mysql.com/apt/ubuntu noble/mysql-8.4-lts amd64 mysql-common amd64 8.4.2-1ubuntu24.04 [67.3 kB]
+Get:6 http://repo.mysql.com/apt/ubuntu noble/mysql-8.4-lts amd64 mysql-community-client-plugins amd64 8.4.2-1ubuntu24.04 [1,468 kB]
+Get:7 http://ru.archive.ubuntu.com/ubuntu noble/main amd64 mecab-ipadic-utf8 all 2.7.0-20070801+main-3 [4,384 B]
+Get:8 http://repo.mysql.com/apt/ubuntu noble/mysql-8.4-lts amd64 mysql-community-client-core amd64 8.4.2-1ubuntu24.04 [1,824 kB]
+Get:9 http://repo.mysql.com/apt/ubuntu noble/mysql-8.4-lts amd64 mysql-community-client amd64 8.4.2-1ubuntu24.04 [2,108 kB]
+Get:10 http://repo.mysql.com/apt/ubuntu noble/mysql-8.4-lts amd64 mysql-client amd64 8.4.2-1ubuntu24.04 [65.9 kB]
+Get:11 http://repo.mysql.com/apt/ubuntu noble/mysql-8.4-lts amd64 mysql-community-server-core amd64 8.4.2-1ubuntu24.04 [24.0 MB]
+Get:12 http://repo.mysql.com/apt/ubuntu noble/mysql-8.4-lts amd64 mysql-community-server amd64 8.4.2-1ubuntu24.04 [75.5 kB]
+Get:13 http://repo.mysql.com/apt/ubuntu noble/mysql-8.4-lts amd64 mysql-server amd64 8.4.2-1ubuntu24.04 [65.9 kB]
+Fetched 36.6 MB in 5s (7,593 kB/s)
+N: Ignoring file 'virtualbox-7.0_7.0.20-163906-Ubuntu-jammy_amd64.deb' in directory '/etc/apt/sources.list.d/' as it has an invalid filename extension
+Preconfiguring packages ...
+Selecting previously unselected package mysql-common.
+(Reading database ... 193868 files and directories currently installed.)
+Preparing to unpack .../00-mysql-common_8.4.2-1ubuntu24.04_amd64.deb ...
+Unpacking mysql-common (8.4.2-1ubuntu24.04) ...
+Selecting previously unselected package mysql-community-client-plugins.
+Preparing to unpack .../01-mysql-community-client-plugins_8.4.2-1ubuntu24.04_amd64.deb ...
+Unpacking mysql-community-client-plugins (8.4.2-1ubuntu24.04) ...
+Selecting previously unselected package mysql-community-client-core.
+Preparing to unpack .../02-mysql-community-client-core_8.4.2-1ubuntu24.04_amd64.deb ...
+Unpacking mysql-community-client-core (8.4.2-1ubuntu24.04) ...
+Selecting previously unselected package mysql-community-client.
+Preparing to unpack .../03-mysql-community-client_8.4.2-1ubuntu24.04_amd64.deb ...
+Unpacking mysql-community-client (8.4.2-1ubuntu24.04) ...
+Selecting previously unselected package mysql-client.
+Preparing to unpack .../04-mysql-client_8.4.2-1ubuntu24.04_amd64.deb ...
+Unpacking mysql-client (8.4.2-1ubuntu24.04) ...
+Selecting previously unselected package libaio1t64:amd64.
+Preparing to unpack .../05-libaio1t64_0.3.113-6build1_amd64.deb ...
+Unpacking libaio1t64:amd64 (0.3.113-6build1) ...
+Selecting previously unselected package libmecab2:amd64.
+Preparing to unpack .../06-libmecab2_0.996-14ubuntu4_amd64.deb ...
+Unpacking libmecab2:amd64 (0.996-14ubuntu4) ...
+Selecting previously unselected package mysql-community-server-core.
+Preparing to unpack .../07-mysql-community-server-core_8.4.2-1ubuntu24.04_amd64.deb ...
+Unpacking mysql-community-server-core (8.4.2-1ubuntu24.04) ...
+Selecting previously unselected package mysql-community-server.
+Preparing to unpack .../08-mysql-community-server_8.4.2-1ubuntu24.04_amd64.deb ...
+Unpacking mysql-community-server (8.4.2-1ubuntu24.04) ...
+Selecting previously unselected package mecab-utils.
+Preparing to unpack .../09-mecab-utils_0.996-14ubuntu4_amd64.deb ...
+Unpacking mecab-utils (0.996-14ubuntu4) ...
+Selecting previously unselected package mecab-ipadic.
+Preparing to unpack .../10-mecab-ipadic_2.7.0-20070801+main-3_all.deb ...
+Unpacking mecab-ipadic (2.7.0-20070801+main-3) ...
+Selecting previously unselected package mecab-ipadic-utf8.
+Preparing to unpack .../11-mecab-ipadic-utf8_2.7.0-20070801+main-3_all.deb ...
+Unpacking mecab-ipadic-utf8 (2.7.0-20070801+main-3) ...
+Selecting previously unselected package mysql-server.
+Preparing to unpack .../12-mysql-server_8.4.2-1ubuntu24.04_amd64.deb ...
+Unpacking mysql-server (8.4.2-1ubuntu24.04) ...
+Setting up libmecab2:amd64 (0.996-14ubuntu4) ...
+Setting up mysql-common (8.4.2-1ubuntu24.04) ...
+update-alternatives: using /etc/mysql/my.cnf.fallback to provide /etc/mysql/my.cnf (my.cnf) in auto mode
+Setting up mecab-utils (0.996-14ubuntu4) ...
+Setting up libaio1t64:amd64 (0.3.113-6build1) ...
+Setting up mysql-community-client-plugins (8.4.2-1ubuntu24.04) ...
+Setting up mecab-ipadic (2.7.0-20070801+main-3) ...
+Compiling IPA dictionary for Mecab.  This takes long time...
+reading /usr/share/mecab/dic/ipadic/unk.def ... 40
+emitting double-array: 100% |###########################################|
+/usr/share/mecab/dic/ipadic/model.def is not found. skipped.
+reading /usr/share/mecab/dic/ipadic/Filler.csv ... 19
+reading /usr/share/mecab/dic/ipadic/Noun.nai.csv ... 42
+reading /usr/share/mecab/dic/ipadic/Symbol.csv ... 208
+reading /usr/share/mecab/dic/ipadic/Adverb.csv ... 3032
+reading /usr/share/mecab/dic/ipadic/Auxil.csv ... 199
+reading /usr/share/mecab/dic/ipadic/Noun.csv ... 60477
+reading /usr/share/mecab/dic/ipadic/Noun.proper.csv ... 27328
+reading /usr/share/mecab/dic/ipadic/Noun.verbal.csv ... 12146
+reading /usr/share/mecab/dic/ipadic/Noun.place.csv ... 72999
+reading /usr/share/mecab/dic/ipadic/Noun.demonst.csv ... 120
+reading /usr/share/mecab/dic/ipadic/Interjection.csv ... 252
+reading /usr/share/mecab/dic/ipadic/Noun.name.csv ... 34202
+reading /usr/share/mecab/dic/ipadic/Noun.adjv.csv ... 3328
+reading /usr/share/mecab/dic/ipadic/Noun.org.csv ... 16668
+reading /usr/share/mecab/dic/ipadic/Adj.csv ... 27210
+reading /usr/share/mecab/dic/ipadic/Noun.number.csv ... 42
+reading /usr/share/mecab/dic/ipadic/Verb.csv ... 130750
+reading /usr/share/mecab/dic/ipadic/Noun.adverbal.csv ... 795
+reading /usr/share/mecab/dic/ipadic/Postp.csv ... 146
+reading /usr/share/mecab/dic/ipadic/Noun.others.csv ... 151
+reading /usr/share/mecab/dic/ipadic/Adnominal.csv ... 135
+reading /usr/share/mecab/dic/ipadic/Conjunction.csv ... 171
+reading /usr/share/mecab/dic/ipadic/Prefix.csv ... 221
+reading /usr/share/mecab/dic/ipadic/Others.csv ... 2
+reading /usr/share/mecab/dic/ipadic/Postp-col.csv ... 91
+reading /usr/share/mecab/dic/ipadic/Suffix.csv ... 1393
+emitting double-array: 100% |###########################################|
+reading /usr/share/mecab/dic/ipadic/matrix.def ... 1316x1316
+emitting matrix      : 100% |###########################################|
+
+done!
+update-alternatives: using /var/lib/mecab/dic/ipadic to provide /var/lib/mecab/dic/debian (mecab-dictionary) in auto mode
+Setting up mysql-community-client-core (8.4.2-1ubuntu24.04) ...
+Setting up mysql-community-server-core (8.4.2-1ubuntu24.04) ...
+Setting up mecab-ipadic-utf8 (2.7.0-20070801+main-3) ...
+Compiling IPA dictionary for Mecab.  This takes long time...
+reading /usr/share/mecab/dic/ipadic/unk.def ... 40
+emitting double-array: 100% |###########################################|
+/usr/share/mecab/dic/ipadic/model.def is not found. skipped.
+reading /usr/share/mecab/dic/ipadic/Filler.csv ... 19
+reading /usr/share/mecab/dic/ipadic/Noun.nai.csv ... 42
+reading /usr/share/mecab/dic/ipadic/Symbol.csv ... 208
+reading /usr/share/mecab/dic/ipadic/Adverb.csv ... 3032
+reading /usr/share/mecab/dic/ipadic/Auxil.csv ... 199
+reading /usr/share/mecab/dic/ipadic/Noun.csv ... 60477
+reading /usr/share/mecab/dic/ipadic/Noun.proper.csv ... 27328
+reading /usr/share/mecab/dic/ipadic/Noun.verbal.csv ... 12146
+reading /usr/share/mecab/dic/ipadic/Noun.place.csv ... 72999
+reading /usr/share/mecab/dic/ipadic/Noun.demonst.csv ... 120
+reading /usr/share/mecab/dic/ipadic/Interjection.csv ... 252
+reading /usr/share/mecab/dic/ipadic/Noun.name.csv ... 34202
+reading /usr/share/mecab/dic/ipadic/Noun.adjv.csv ... 3328
+reading /usr/share/mecab/dic/ipadic/Noun.org.csv ... 16668
+reading /usr/share/mecab/dic/ipadic/Adj.csv ... 27210
+reading /usr/share/mecab/dic/ipadic/Noun.number.csv ... 42
+reading /usr/share/mecab/dic/ipadic/Verb.csv ... 130750
+reading /usr/share/mecab/dic/ipadic/Noun.adverbal.csv ... 795
+reading /usr/share/mecab/dic/ipadic/Postp.csv ... 146
+reading /usr/share/mecab/dic/ipadic/Noun.others.csv ... 151
+reading /usr/share/mecab/dic/ipadic/Adnominal.csv ... 135
+reading /usr/share/mecab/dic/ipadic/Conjunction.csv ... 171
+reading /usr/share/mecab/dic/ipadic/Prefix.csv ... 221
+reading /usr/share/mecab/dic/ipadic/Others.csv ... 2
+reading /usr/share/mecab/dic/ipadic/Postp-col.csv ... 91
+reading /usr/share/mecab/dic/ipadic/Suffix.csv ... 1393
+emitting double-array: 100% |###########################################|
+reading /usr/share/mecab/dic/ipadic/matrix.def ... 1316x1316
+emitting matrix      : 100% |###########################################|
+
+done!
+update-alternatives: using /var/lib/mecab/dic/ipadic-utf8 to provide /var/lib/mecab/dic/debian (mecab-dictionary) in auto mode
+Setting up mysql-community-client (8.4.2-1ubuntu24.04) ...
+Setting up mysql-client (8.4.2-1ubuntu24.04) ...
+Setting up mysql-community-server (8.4.2-1ubuntu24.04) ...
+update-alternatives: using /etc/mysql/mysql.cnf to provide /etc/mysql/my.cnf (my.cnf) in auto mode
+Created symlink /etc/systemd/system/multi-user.target.wants/mysql.service → /usr/lib/systemd/system/mysql.service.
+Setting up mysql-server (8.4.2-1ubuntu24.04) ...
+Processing triggers for man-db (2.12.0-4build2) ...
+Processing triggers for libc-bin (2.39-0ubuntu8.3) ...
+db@db-ubuntu22:/$ systemctl status mysql
+● mysql.service - MySQL Community Server
+     Loaded: loaded (/usr/lib/systemd/system/mysql.service; enabled; preset: enabled)
+     Active: active (running) since Sat 2024-09-14 16:08:16 MSK; 22s ago
+       Docs: man:mysqld(8)
+             http://dev.mysql.com/doc/refman/en/using-systemd.html
+   Main PID: 13985 (mysqld)
+     Status: "Server is operational"
+      Tasks: 35 (limit: 4614)
+     Memory: 430.5M (peak: 444.7M)
+        CPU: 585ms
+     CGroup: /system.slice/mysql.service
+             └─13985 /usr/sbin/mysqld
+
+Sep 14 16:08:15 db-ubuntu22 systemd[1]: Starting mysql.service - MySQL Community Server...
+Sep 14 16:08:16 db-ubuntu22 systemd[1]: Started mysql.service - MySQL Community Server.
+db@db-ubuntu22:/$
+
+*******************************************************************************************************************
+
+Задание 4
+
+db@db-ubuntu22:~$ sudo apt-get update
+Hit:1 http://nginx.org/packages/ubuntu noble InRelease
+Hit:2 http://ru.archive.ubuntu.com/ubuntu noble InRelease
+Get:3 http://ru.archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+Hit:4 http://ru.archive.ubuntu.com/ubuntu noble-backports InRelease
+Hit:5 http://security.ubuntu.com/ubuntu noble-security InRelease
+Hit:6 https://download.docker.com/linux/ubuntu noble InRelease
+Hit:7 http://repo.mysql.com/apt/ubuntu noble InRelease
+Hit:8 https://download.virtualbox.org/virtualbox/debian jammy InRelease
+Get:9 https://ppa.launchpadcontent.net/ondrej/php/ubuntu noble InRelease [24.4 kB]
+Get:10 https://ppa.launchpadcontent.net/ondrej/php/ubuntu noble/main amd64 Packages [119 kB]
+Fetched 270 kB in 1s (333 kB/s)
+Reading package lists... Done
+N: Ignoring file 'virtualbox-7.0_7.0.20-163906-Ubuntu-jammy_amd64.deb' in directory '/etc/apt/sources.list.d/' as it has an invalid filename extension
+db@db-ubuntu22:~$ sudo dpkg -i nginx_1.26.2-1~noble_amd64.deb
+Selecting previously unselected package nginx.
+(Reading database ... 194299 files and directories currently installed.)
+Preparing to unpack nginx_1.26.2-1~noble_amd64.deb ...
+----------------------------------------------------------------------
+
+Thanks for using nginx!
+
+Please find the official documentation for nginx here:
+* https://nginx.org/en/docs/
+
+Please subscribe to nginx-announce mailing list to get
+the most important news about nginx:
+* https://nginx.org/en/support.html
+
+Commercial subscriptions for nginx are available on:
+* https://nginx.com/products/
+
+----------------------------------------------------------------------
+Unpacking nginx (1.26.2-1~noble) ...
+Setting up nginx (1.26.2-1~noble) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/nginx.service → /usr/lib/systemd/system/nginx.service.
+Processing triggers for man-db (2.12.0-4build2) ...
+db@db-ubuntu22:~$ sudo dpkg -r nginx_1.26.2-1~noble_amd64.deb
+dpkg: error: --remove needs a valid package name but 'nginx_1.26.2-1~noble_amd64.deb' is not: illegal package name in specifier 'nginx_1.26.2-1~noble_amd64.deb': character '~' not allowed (only letters, digits and characters '-+._')
+
+Type dpkg --help for help about installing and deinstalling packages [*];
+Use 'apt' or 'aptitude' for user-friendly package management;
+Type dpkg -Dhelp for a list of dpkg debug flag values;
+Type dpkg --force-help for a list of forcing options;
+Type dpkg-deb --help for help about manipulating *.deb files;
+
+Options marked [*] produce a lot of output - pipe it through 'less' or 'more' !
+db@db-ubuntu22:~$ sudo dpkg -r nginx
+(Reading database ... 194333 files and directories currently installed.)
+Removing nginx (1.26.2-1~noble) ...
+Processing triggers for man-db (2.12.0-4build2) ...
+db@db-ubuntu22:~$
+
+
+******************************************************************************************
+
+
+
