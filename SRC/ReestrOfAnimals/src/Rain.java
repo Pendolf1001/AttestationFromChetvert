@@ -1,5 +1,6 @@
-public class Main {
+public class Rain {
     public static void main(String[] args) {
+
         System.out.println("Hello world!");
     }
 }
