@@ -90,6 +90,7 @@ public class ConsoleUI implements View{
     public void getCommandAnimal(){
         if(presenter.getReestrSize()>0){
             System.out.println("Введите номер животного из списка: ");
+            presenter.getInfo();
             String si = scanner.nextLine();
             int i=Integer.parseInt(si);
             if(presenter.getReestrSize()<i){
@@ -107,6 +108,7 @@ public class ConsoleUI implements View{
     public void addCommand(){
         if(presenter.getReestrSize()>0){
             System.out.println("Введите номер животного из списка: ");
+            presenter.getInfo();
             String si = scanner.nextLine();
             int i=Integer.parseInt(si);
             if(presenter.getReestrSize()<i){
@@ -127,12 +129,14 @@ public class ConsoleUI implements View{
     public void execCommand(){
         if(presenter.getReestrSize()>0){
             System.out.println("Введите номер животного из списка: ");
+            presenter.getInfo();
             String si = scanner.nextLine();
             int i=Integer.parseInt(si);
             if(presenter.getReestrSize()<i){
                 System.out.println("Такого номера в реестре нет");
             }else{
                 System.out.println("Введите название команды");
+                presenter.getCommandAnimal (i);
                 String key = scanner.nextLine();
                 presenter.execCommand (i,key );
             }
