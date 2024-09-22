@@ -1,9 +1,11 @@
 package View;
+import View.Commands.*;
 
 import java.util.ArrayList;
 import java.util.List;
 public class MainMenu {
     private List<Command> commandList;
+
     public MainMenu(ConsoleUI consoleUI) {
         commandList = new ArrayList<>();
         commandList.add(new GetInfo(consoleUI));
@@ -14,10 +16,11 @@ public class MainMenu {
         commandList.add(new FindPoBirthDate(consoleUI));
         commandList.add(new Finish(consoleUI));
     }
-    public String menu(){
+
+    public String menu() {
         StringBuilder stringBuilder = new StringBuilder();
         for (int i = 0; i < commandList.size(); i++) {
-            stringBuilder.append(Integer.toString(i+1));
+            stringBuilder.append(Integer.toString(i + 1));
             stringBuilder.append(". ");
             stringBuilder.append(commandList.get(i).getDescription());
             stringBuilder.append("\n");
@@ -25,11 +28,12 @@ public class MainMenu {
         return stringBuilder.toString();
     }
 
-    public void execute(int choice){
-        Command command = commandList.get(choice-1);
+    public void execute(int choice) {
+        Command command = commandList.get(choice - 1);
         command.execute();
     }
 
-    public int getSize(){
+    public int getSize() {
         return commandList.size();
     }
+}

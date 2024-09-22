@@ -1,6 +1,6 @@
 package Model;
 
-public class Service{
+public final class Service{
     private ReestrOf sReestr;
     private AnimalBuilder ab;
 

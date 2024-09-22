@@ -6,7 +6,7 @@ import View.*;
 public class Presenter{
 
     private View view;
-    private Service service;
+    private final Service service;
 
     public Presenter (View view){
         this.view=view;
